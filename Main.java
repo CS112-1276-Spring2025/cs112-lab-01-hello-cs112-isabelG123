@@ -5,13 +5,14 @@ public class Main {
         System.out.println(Main.addTwoNumber(5, 20));
 
         Song song1 = new Song("Bohemian Rhapsody", "Queen", "Rock", 5.55);
-        
+        Song song2 = new Song();
         // Display song info
         song1.displaySongInfo();
 
         // Update song title and display updated info
         song1.setTitle("Under Pressure");
         song1.displaySongInfo();
+        song2.displaySongInfo();
 
     }
 

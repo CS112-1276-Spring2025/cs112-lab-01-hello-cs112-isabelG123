@@ -1,4 +1,4 @@
-public class song {
+public class Song {
         
     // Declare private variables for song properties
         private String title;
@@ -8,10 +8,16 @@ public class song {
     
         // Constructor to initialize the song object
         public Song(String title, String artist, String genre, double duration) {
-            this.title = title;
-            this.artist = artist;
-            this.genre = genre;
-            this.duration = duration;
+            this.setTitle(title);
+            this.setArtist(artist);
+            this.setGenre(genre);
+            this.setDuration(duration);
+        }
+        public Song() {
+            this.title = "Unknown Title";
+            this.artist = "Unknown Artist";
+            this.genre = "Unknown Genre";
+            this.duration = 0.0;
         }
     
         // Getter for title
@@ -60,6 +66,17 @@ public class song {
             System.out.println("Artist: " + artist);
             System.out.println("Genre: " + genre);
             System.out.println("Duration: " + duration + " minutes");
+        }
+
+        public String toString() {
+            return "Song: " + title + "\nArtist: " + artist + "\nGenre: " + genre + "\nDuration: " + duration + " mins";
+        }
+
+        public boolean equals(Song other)
+        {
+            return this.title == other.title && this.artist == other.artist && this.genre == other.genre
+                    && this.duration == other.duration;
+
         }
     
 }
